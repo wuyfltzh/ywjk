@@ -1,0 +1,158 @@
+{{> navigation-bar}}
+
+<link rel="stylesheet" href="/css/bootstrapTable/bootstrap-table.min.css"/>
+<link rel="stylesheet" href="/css/jquery.datetimepicker.css"/>
+<link rel="stylesheet" href="/css/sysMgnt/location.css"/>
+
+<div class="main-box j-main">
+    <div class="toolbar toolbar-room clearfix">
+        <label>机房管理</label>
+        <div class="pull-right">
+            <button class="btn btn-primary j-search-check">查询</button>
+            <button class="btn btn-danger j-delete-check">删除</button>
+            <a class="btn btn-default" data-toggle="modal" data-target="#newRoomModal">新增</a>
+        </div>
+    </div>
+    <table class="table-room"></table>
+    <div class="toolbar toolbar-cab clearfix">
+        <label>机柜管理</label>
+        <div class="pull-right">
+            <button class="btn btn-primary j-search-check">查询</button>
+            <button class="btn btn-danger j-delete-check">删除</button>
+            <a class="btn btn-default" data-toggle="modal" data-target="#newCabModal">新增</a>
+        </div>
+    </div>
+    <table class="table-cab"></table>
+</div>
+<!--新增弹框-->
+<div class="modal fade" id="newRoomModal">
+    <div class="modal-dialog  new-room-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">新增机房</h4>
+            </div>
+            <div class="modal-body">
+                <form class="check-form">
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name">机房编号:</label>
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name">机房名称:</label>
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name">机房位置:</label>
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name">详细地址:</label>
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name">机房说明:</label>
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name">机房照片:</label>
+                            <button class="glyphicon glyphicon-plus btn btn-default"></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <input type="file"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">确认</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!--新增弹框-->
+<div class="modal fade" id="newCabModal">
+    <div class="modal-dialog  new-cab-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">新增机柜</h4>
+            </div>
+            <div class="modal-body">
+                <form class="check-form">
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name">机柜编号:</label>
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name">机柜名称:</label>
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name">机柜厂家:</label>
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name">机柜类型:</label>
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name">规格尺寸(mm):</label>
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name">所在机房:</label>
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name">机房照片:</label>
+                            <button class="glyphicon glyphicon-plus btn btn-default"></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <input type="file"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">确认</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script src="/js/lib/bootstrapTable/bootstrap-table.min.js"></script>
+<script src="/js/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+<script src="/js/lib/jquery.datetimepicker.js"></script>
+<script src="/js/cmn_resize.js"></script>
+<script src="/js/sysMgnt/location.js"></script>

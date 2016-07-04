@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="utf-8">
+    <title>EMP智能运维监控系统</title>
+    <link rel="stylesheet" href="/css/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/common.css"/>
+    <link rel="stylesheet" href="/css/layout.css"/>
+    <script src="/js/lib/jquery-1.11.3.min.js"></script>
+    <script src="/js/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/layout.js"></script>
+</head>
+<body>
+<header>
+    <div class="sys-icon"></div>
+    <nav>
+        <ul>
+            <li class="index active">
+                <a href="/" target="_self">首页</a>
+            </li>
+            <li class="net">
+                <a href="/network" target="_self">网络拓扑</a>
+            </li>
+            <li class="res">
+                <a href="/resourceMgnt" target="_self">资源管理</a>
+            </li>
+            <li class="warn">
+                <a href="/alarmMgnt" target="_self">告警管理</a>
+            </li>
+            <li class="check">
+                <a href="javascript:void (0);">巡检管理</a>
+                <ul class="sub-menu">
+                    <li><a href="/checkMgnt/check" target="_self">巡检记录</a></li>
+                    <li><a href="/checkMgnt/change" target="_self">配件更换</a></li>
+                </ul>
+            </li>
+            <li class="tab">
+                <a href="javascript:;" target="_self">查询分析</a>
+                <ul class="sub-menu">
+                    <li><a href="/QAA/trade" target="_self">交易记录</a></li>
+                    <li><a href="/QAA/TOP" target="_self">TOP分析</a></li>
+                </ul>
+            </li>
+            <li class="mgnt">
+                <a href="javascript:;" target="_self">系统管理</a>
+                <ul class="sub-menu">
+                    <li><a href="/sysMgnt/user" target="_self">用户管理</a></li>
+                    <!--<li><a href="/sysMgnt/authority" target="_self">权限管理</a></li>
+                    <li><a href="/sysMgnt/location" target="_self">位置管理</a></li>
+                    <li><a href="/sysMgnt/maintenance" target="_self">维保管理</a></li>
+                    <li><a href="/sysMgnt/dictionary" target="_self">数据字典</a></li>
+                    <li><a href="/sysMgnt/setup" target="_self">系统设置</a></li>-->
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <ul class="btn-list">
+        <li>
+            <a href="/message" target="_blank">
+                <span class="glyphicon glyphicon-comment" aria-hidden="true">&nbsp;</span>
+                消息提醒
+                <span class="message-count"></span>
+            </a>
+        </li>
+        <li class="j-user-name">
+            <span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;</span>
+            <a href="javascript:;">{{userName}}</a>
+            <ul class="user-options">
+                <a data-toggle="modal" data-target="#passwordModal"><li>修改密码</li></a>
+                <a href="/logout" target="_self"><li>登出</li></a>
+            </ul>
+        </li>
+    </ul>
+</header>
+<div class="block-body">
+    {{{body}}}
+</div>
+<footer>浙江网新恩普软件有限公司   版权所有</footer>
+<div class="modal fade password-modal" id="passwordModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">修改密码</h4>
+            </div>
+            <div class="modal-body">
+                <form class="password-form">
+                    <div class="row">
+                        <div class="col-md-offset-4 col-md-8">
+                            <label class="name"><span class="required">*</span>旧密码:</label><input type="text" class="j-old-password"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-4 col-md-8">
+                            <label class="name" ><span class="required">*</span>新密码:</label><input type="password" class="j-new-password"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-4 col-md-8">
+                            <label class="name"><span class="required">*</span>确认密码:</label><input type="password" class="j-confirm-password"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary j-change-password">确认修改</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</body>
+</html>

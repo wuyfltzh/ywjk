@@ -1,0 +1,132 @@
+{{> navigation-bar}}
+
+<link rel="stylesheet" href="/css/bootstrapTable/bootstrap-table.min.css"/>
+<link rel="stylesheet" href="/css/resourceMgnt/common.css"/>
+<link rel="stylesheet" href="/css/resourceMgnt/rscDetail.css"/>
+<div class="main-box j-main">
+    <div class="content-block">
+        <table class="table table-bordered table-col-4">
+            <caption>资源信息</caption>
+            <tr>
+                <th>资源编号</th>
+                <td>{{resourceInfo.data.assetID}}</td>
+                <th>出保日期</th>
+                <td>{{resourceInfo.data.expireDate}}</td>
+            </tr>
+            <tr>
+                <th>资源名称</th>
+                <td>{{resourceInfo.data.assetName}}</td>
+                <th>所在机房</th>
+                <td>{{resourceInfo.data.roomID}}</td>
+            </tr>
+            <tr>
+                <th>操作系统</th>
+                <td>{{resourceInfo.data.factoryOS}}</td>
+                <th>所在机柜</th>
+                <td>{{resourceInfo.data.cabinetID}}</td>
+            </tr>
+            <tr>
+                <th>系统版本</th>
+                <td>{{resourceInfo.data.osVersion}}</td>
+                <th>所在机架</th>
+                <td>{{resourceInfo.data.rackNumber}}</td>
+            </tr>
+            <tr>
+                <th>设备IP</th>
+                <td>{{resourceInfo.data.iPAddr}}</td>
+                <th>监控状态</th>
+                <td>{{resourceInfo.moniterStatusDic.[sourceInfo.data.moniterStatus]}}</td>
+            </tr>
+            <tr>
+                <th>备用IP</th>
+                <td>{{resourceInfo.data.iPAddr2}}</td>
+                <th>使用状态</th>
+                <td>{{resourceInfo.data.useStatus}}</td>
+            </tr>
+            <tr>
+                <th>管理IP</th>
+                <td>{{resourceInfo.data.iPManage}}</td>
+                <th>使用人</th>
+                <td>{{resourceInfo.data.usedFor}}</td>
+            </tr>
+            <tr>
+                <th>资源父类</th>
+                <td>{{resourceInfo.data.assetClassID}}</td>
+                <th>使用部门</th>
+                <td>{{resourceInfo.data.usedDept}}</td>
+            </tr>
+            <tr>
+                <th>资源子类</th>
+                <td>{{resourceInfo.data.assetClassID2}}</td>
+                <th>维保状态</th>
+                <td>{{resourceInfo.data.maintainStaus}}</td>
+            </tr>
+            <tr>
+                <th>设备厂商</th>
+                <td>{{resourceInfo.data.factoryID}}</td>
+                <th>维保单位</th>
+                <td>{{resourceInfo.data.maintainID}}</td>
+            </tr>
+            <tr>
+                <th>厂商联系人</th>
+                <td>{{resourceInfo.data.assetID}}</td>
+                <th>维保联系人</th>
+                <td>{{resourceInfo.data.assetID}}</td>
+            </tr>
+            <tr>
+                <th>厂商电话</th>
+                <td>{{resourceInfo.data.assetID}}</td>
+                <th>维保联系电话</th>
+                <td>{{resourceInfo.data.assetID}}</td>
+            </tr>
+            <tr>
+                <th>电子邮件</th>
+                <td>{{resourceInfo.data.assetID}}</td>
+                <th>维保联系mail</th>
+                <td>{{resourceInfo.data.assetID}}</td>
+            </tr>
+            <tr>
+                <th>设备型号</th>
+                <td>{{resourceInfo.data.factoryType}}</td>
+                <th>资产记录人</th>
+                <td>{{resourceInfo.data.assetReger}}</td>
+            </tr>
+            <tr>
+                <th>序列号</th>
+                <td>{{resourceInfo.data.factorySerial}}</td>
+                <th>记录时间</th>
+                <td>{{resourceInfo.data.assetRegtime}}</td>
+            </tr>
+            <tr>
+                <th>购买日期</th>
+                <td>{{resourceInfo.data.buyDate}}</td>
+                <th></th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>详细配置</th>
+                <td>{{resourceInfo.data.assetDetail}}</td>
+                <th>资产说明</th>
+                <td>{{resourceInfo.data.asseMemo}}</td>
+            </tr>
+        </table>
+        <ul class="img-list">
+            <li>
+                <div class="img-title">资产图片</div>
+                <div class="img-container">
+                    <img height="300" alt="资产图片" src="{{resourceInfo.data.pic1}}"/>
+                </div>
+            </li>
+            <li>
+                <div class="img-title">资产图片</div>
+                <div class="img-container">
+                    <img height="300" alt="资产图片" src="{{resourceInfo.data.pic2}}"/>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="/js/lib/bootstrapTable/bootstrap-table.min.js"></script>
+<script src="/js/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+<script src="/js/cmn_resize.js"></script>
+<script src="/js/resourceMgnt/rscDetail.js"></script>

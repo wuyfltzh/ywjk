@@ -1,0 +1,54 @@
+{{> rscNav}}
+
+<link rel="stylesheet" href="/css/bootstrapTable/bootstrap-table.min.css"/>
+<link rel="stylesheet" href="/css/resourceMgnt/common.css"/>
+<link rel="stylesheet" href="/css/resourceMgnt/net.css"/>
+<input type="hidden" class="j-host-id" value="{{hostId}}"/>
+<div class="main-box j-main">
+    <div class="content-block">
+        <table class="table table-bordered table-col-4">
+            <caption>基本信息</caption>
+            <tr>
+                <th>资源名称</th>
+                <td class="j-name">2</td>
+                <th>操作系统</th>
+                <td class="j-os">2</td>
+            </tr>
+            <tr>
+                <th>设备IP</th>
+                <td class="j-ip">2</td>
+                <th>系统版本</th>
+                <td class="j-os-version">2</td>
+            </tr>
+            <tr>
+                <th>品牌型号</th>
+                <td class="j-band">2</td>
+                <th>启动时间</th>
+                <td class="j-starttime">2</td>
+            </tr>
+            <tr>
+                <th>设备类型</th>
+                <td class="j-type">2</td>
+                <th>运行时间</th>
+                <td class="j-runtime">2</td>
+            </tr>
+            <tr>
+                <th>检测间隔</th>
+                <td class="j-interval">2</td>
+                <th>当前状态</th>
+                <td class="j-status">2</td>
+            </tr>
+        </table>
+        <div class="row">
+            <div class="chart j-cpu-his"></div>
+        </div>
+        <div class="row">
+            <div class="chart j-im-his"></div>
+        </div>
+    </div>
+</div>
+<script src="/js/lib/bootstrapTable/bootstrap-table.min.js"></script>
+<script src="/js/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+<script src="/js/lib/highcharts.js"></script>
+<script src="/js/cmn_resize.js"></script>
+<script src="/js/resourceMgnt/net.js"></script>

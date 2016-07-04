@@ -1,0 +1,40 @@
+{{> navigation-bar}}
+
+<link rel="stylesheet" href="/css/bootstrapTable/bootstrap-table.min.css"/>
+<link rel="stylesheet" href="/css/jquery.datetimepicker.css"/>
+
+<div class="main-box j-main">
+    <div class="toolbar clearfix">
+        <label>告警等级：</label>
+        <select class="j-level">
+            <option value="">所有告警等级</option>
+            <option value="5">致命</option>
+            <option value="4">严重</option>
+            <option value="3">警告</option>
+            <option value="2">信息</option>
+        </select>
+        <label>报警时间：</label>
+        <input type="text" class="datepicker j-start" placeholder="开始时间"/>
+        <input type="text" class="datepicker j-end" placeholder="结束时间"/>
+        <label>资源类型：</label>
+        <select class="j-sourceType">
+            <option value="">所有告警资源类型</option>
+            <option value="1">主机</option>
+            <option value="2">数据库</option>
+            <option value="3">中间件</option>
+            <option value="4">网络设备</option>
+        </select>
+        <label>资源名称：</label>
+        <input type="text" class="j-sourceName" placeholder="资源名称"/>
+        <div class="pull-right">
+            <button class="btn btn-primary j-search-alarm">查询</button>
+        </div>
+    </div>
+    <table></table>
+</div>
+
+<script src="/js/lib/bootstrapTable/bootstrap-table.min.js"></script>
+<script src="/js/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+<script src="/js/lib/jquery.datetimepicker.js"></script>
+<script src="/js/cmn_resize.js"></script>
+<script src="/js/alarmMgnt.js"></script>

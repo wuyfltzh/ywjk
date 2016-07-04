@@ -1,0 +1,4 @@
+.img-list{display:table;width:100%;text-align:center;}
+.img-list li{display:table-cell;border:1px solid #ddd;border-collapse:collapse;width:50%;}
+.img-list .img-title{border-bottom:1px solid #ddd;line-height:30px;background:#f3fafd;}
+.img-list img{max-height:300px;max-width:100%;}

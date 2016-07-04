@@ -1,0 +1,132 @@
+{{> navigation-bar}}
+
+<link rel="stylesheet" href="/css/bootstrapTable/bootstrap-table.min.css"/>
+<link rel="stylesheet" href="/css/jquery.datetimepicker.css"/>
+<link rel="stylesheet" href="/css/checkMgnt/checkMgnt.css"/>
+<style>
+    a{color:#fff;!important;}
+</style>
+
+<div class="main-box j-main">
+    <div class="toolbar clearfix">
+        <label>巡检时间：</label>
+        <input type="text" class="datepicker j-start" placeholder="开始日期"/>
+        <label>到</label>
+        <input type="text" class="datepicker j-end" placeholder="结束日期"/>
+        <label>巡检单号：</label>
+        <input type="text" class="j-checkNo" placeholder="巡检单号"/>
+        <label>巡检人员：</label>
+        <input type="text" class="j-checker" placeholder="巡检人员"/>
+        <div class="pull-right">
+            <button class="btn btn-primary j-search-check">查询</button>
+            <a class="btn btn-default" data-toggle="modal" data-target="#newCheckModal">新增</a>
+        </div>
+    </div>
+    <table class="j-check-table"></table>
+</div>
+<!--新增弹框-->
+<div class="modal fade" id="newCheckModal">
+    <div class="modal-dialog  new-check-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">新增巡检记录</h4>
+            </div>
+            <div class="modal-body">
+                <form class="check-form">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="name">巡检名称:</label><input class="InspectName" type="text" />
+                        </div>
+                        <div class="col-md-3">
+                            <label class="name">巡检日期:</label><input class="InspectDate datepicker" type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="name">巡检人员:</label class="name">
+                            <select class="Inspecter">
+                                <option value="0">致命</option>
+                                <option value="1">严重</option>
+                                <option value="1">告警</option>
+                                <option value="1">一般</option>
+                            </select>
+
+                        </div>
+                        <div class="col-md-3">
+                            <label class="name">联系电话:</label><input class="InspectTel" type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="name">确认用户:</label><input class="confirmer" type="text" />
+                        </div>
+                        <div class="col-md-3">
+                            <label class="name">用户电话:</label><input class="confirmerTel" type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label>更换配件</label>
+                            <label><input type="checkbox" name="partChanged" value="0"/>有</label>
+                            <label><input type="checkbox" name="partChanged" value="1"/>无</label>
+                        </div>
+                        <div class="col-md-4">
+                            <label>巡检报告:</label><input class="suggestDoc" type="file"/>
+                        </div>
+                        <div class="col-md-4">
+                            <label>用户签字报告:</label><input class="confirmpic" type="file"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="name">问题描述:</label><textarea class="text-area InspectProb"></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="name">本次解决:</label><textarea  class="text-area solution"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="name">后续建议:</label><textarea  class="text-area suggest"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-6 col-md-5">
+                            <h5>项目详情</h5>
+                        </div>
+                        <div class="col-md-1">
+                            <label class="name"><a class="btn btn-default btn-sm glyphicon glyphicon-plus j-add-line"></a></label>
+                        </div>
+                    </div>
+                    <div class="row modal-table">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>巡检项目</th>
+                                <th>巡检结果</th>
+                                <th>检出问题</th>
+                                <th>解决说明</th>
+                                <th>故障照片</th>
+                                <th>修复后照片</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody class="InspectDetail">
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary j-add-check">确认</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script src="/js/lib/bootstrapTable/bootstrap-table.min.js"></script>
+<script src="/js/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+<script src="/js/lib/jquery.datetimepicker.js"></script>
+<script src="/js/cmn_resize.js"></script>
+<script src="/js/checkMgnt/checkMgnt.js"></script>

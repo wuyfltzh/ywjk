@@ -1,0 +1,79 @@
+*{
+    /*margin:0;
+    padding: 0;*/
+    box-sizing: border-box;
+    font-family: Arial,'微软雅黑';
+    border:none;
+}
+iframe{display:block;}
+/*通用html,body*/
+html,body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width:100vw;
+    overflow-x: auto;
+    overflow-y: hidden;
+    font-size: 12px;
+    position:relative;
+}
+iframe{margin:0;padding:0}
+/*文本输入框*/
+input[type="text"],input[type="password"]{
+    background: #eff3f7;
+    height: 24px;
+    line-height:24px;
+    padding-left:8px;
+}
+ul{margin:0;padding:0;list-style:none}
+input[type="text"]:focus,input[type="password"]:focus{
+    background: #FFFFFF;
+}
+input[readonly="readonly"],input[readonly="readonly"]:focus{
+    background: #efefef;
+    color:#bbb;
+    border: 1px solid #ededed;
+}
+label{padding-left:10px;}
+textarea{
+    resize: none;
+    padding: 5px;
+}
+
+/***********************表格**************************/
+table,tr,td{
+    border-collapse: collapse;
+    font-size:12px;
+}
+th{background:#f3fafd;}
+
+/***********************图片***************************/
+img{
+    vertical-align: middle;
+}
+/**********************导航条*************************/
+.navigation-bar{ position:relative;height:35px;background:#d9e5f3;border:1px solid #c6c4c4;border-width:1px 0;color:#696c73;padding-left:15px;line-height:33px;font-size:14px;z-index:0;}
+.navigation-bar ul{margin-top:10px;}
+.navigation-bar ul li{float:left;border-radius:3px 3px 0 0;border:1px solid #aaa;border-bottom:none;padding:0 10px;line-height:22px;background:#f1f1f1;}
+.navigation-bar ul li a:hover{text-decoration:none;color:#333;}
+.navigation-bar ul .active{padding:0 20px;line-height:23px;background:#fff;}
+.main-box{ position:relative;padding:10px;overflow-y:auto}
+
+
+/*********************toolbar***************************/
+.toolbar{height:40px;line-height:40px;}
+
+
+.hide{display:none;}
+
+
+
+.modal .name{width:70px;}
+.modal .text-area{width:455px;background: #eff3f7;vertical-align:text-top;}
+.modal input[type="text"],.modal input[type="password"],.modal select{ min-width:130px; }
+
+.required{margin-left:-5px;color:red}
+
+.status-common{color:green}
+.status-error{color:red}
+.status-unknown{color:#aaa}

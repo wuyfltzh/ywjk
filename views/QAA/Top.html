@@ -1,0 +1,39 @@
+{{> navigation-bar}}
+
+<link rel="stylesheet" href="/css/index.css"/>
+<div class="main-box j-main">
+    <div class="content-block j-content-block">
+        <div class="title j-title">
+            <span class="main-title">监控资源统计</span>
+        </div>
+        <div class="chart-container j-chart-monitor-resource"></div>
+    </div>
+    <div class="content-block j-content-block">
+        <div class="title j-title j-warn-title">
+            <span class="main-title">告警统计</span>
+        </div>
+        <div class="chart-container j-chart-warn">
+            <div class="half-chart j-chart-warn-bar"></div>
+            <div class="half-chart j-chart-warn-pie"></div>
+        </div>
+    </div>
+    <div class="content-block j-content-block">
+        <div class="title j-title">
+            <span class="main-title">告警TOP5</span>
+        </div>
+        <div class="chart-container j-chart-warn-top"></div>
+    </div>
+    <div class="content-block j-content-block">
+        <div class="title j-title">
+            <span class="main-title">CPU使用TOP5</span>
+        </div>
+        <div class="chart-container j-chart-cpu-top"></div>
+    </div>
+</div>
+
+<script src="/js/lib/highcharts.js"></script>
+<script src="/js/lib/bootstrapTable/bootstrap-table.min.js"></script>
+<script src="/js/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+<script src="/js/lib/jquery.datetimepicker.js"></script>
+<script src="/js/cmn_resize.js"></script>
+<script src="/js/QAA/top.js"></script>

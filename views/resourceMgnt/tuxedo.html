@@ -1,0 +1,50 @@
+{{> rscNav}}
+
+<link rel="stylesheet" href="/css/bootstrapTable/bootstrap-table.min.css"/>
+<link rel="stylesheet" href="/css/resourceMgnt/common.css"/>
+<input type="hidden" class="j-host-id" value="{{hostId}}"/>
+<div class="main-box j-main">
+    <div class="content-block">
+        <table class="table table-bordered table-col-4 table-basic">
+            <caption>基本信息</caption>
+            <tr>
+                <th>中间件名称</th>
+                <td class="name">Tuxedo中间件</td>
+                <th>中间件版本</th>
+                <td class="version"></td>
+            </tr>
+            <tr>
+                <th>监听地址端口</th>
+                <td class="port"></td>
+                <th>阻塞时间</th>
+                <td class="delay"></td>
+            </tr>
+            <tr>
+                <th>最大容许服务数</th>
+                <td class="maxService"></td>
+                <th>最大容许访问量</th>
+                <td class="maxAccess"></td>
+            </tr>
+            <tr>
+                <th>最大容许应用数</th>
+                <td class="maxProg"></td>
+                <th>可用性</th>
+                <td class="available"></td>
+            </tr>
+            <tr>
+                <th>检测间隔</th>
+                <td class="interval"></td>
+                <th>当前状态</th>
+                <td class="status"></td>
+            </tr>
+        </table>
+        <div class="caption">SERVICE信息</div>
+        <table class="service-table"></table>
+        <div class="caption">服务队列信息</div>
+        <table class="queue-table"></table>
+    </div>
+</div>
+<script src="/js/lib/bootstrapTable/bootstrap-table.min.js"></script>
+<script src="/js/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+<script src="/js/cmn_resize.js"></script>
+<script src="/js/resourceMgnt/tuxedo.js"></script>

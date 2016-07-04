@@ -1,0 +1,297 @@
+{{> navigation-bar}}
+
+<link rel="stylesheet" href="/css/bootstrapTable/bootstrap-table.min.css"/>
+<link rel="stylesheet" href="/css/resourceMgnt/resourceMgnt.css"/>
+<style>
+    input[type="checkbox"]{ margin-right:5px;;}
+</style>
+
+<div class="main-box j-main">
+    <div class="toolbar clearfix">
+        <label><input type="radio" name="monitor" value="yes"/>&nbsp;&nbsp;已监控&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <label><input type="radio" name="monitor" value="no"/>&nbsp;&nbsp;未监控&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <label><input type="radio" name="monitor" checked="checked" value="null"/>&nbsp;&nbsp;所有&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <label>资源类型：</label>
+        <select class="j-resouceType toolbar-input">
+            <option value="null">所有</option>
+            <option value="1">主机</option>
+            <option value="2">数据库</option>
+            <option value="3">中间件</option>
+            <option value="4">网络设备</option>
+        </select>
+        <label>资源名称：</label>
+        <input type="text" class="j-resourceName toolbar-input" placeholder="资源名称"/>
+        <label>IP地址：</label>
+        <input type="text" class="j-ip toolbar-input" placeholder="IP地址"/>
+        <div class="pull-right">
+            <button class="btn btn-primary j-query-resoure">查询</button>
+            <button class="btn btn-danger j-remove-resource">删除</button>
+            <a class="btn btn-default" data-toggle="modal" data-target="#newResourceModal">新增</a>
+        </div>
+    </div>
+    <table></table>
+</div>
+<!--新增弹框-->
+<div class="modal fade" id="newResourceModal">
+    <div class="modal-dialog  new-resource-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">新增资源</h4>
+            </div>
+            <div class="modal-body">
+                <div class="check-form">
+                    <input type="hidden" class="j-assetID"/>
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-5">
+                            <label class="name"><span class="required">*</span>资源名称:</label>
+                            <input type="text" class="j-name"/>
+                        </div>
+                        <div class="col-md-5">
+                            <label class="name"><span class="required">*</span>所在机房:</label>
+                            <select class="j-room">
+                                <option value="-1">请选择</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-5">
+                            <label class="name"><span class="required">*</span>操作系统:</label>
+                            <select  class="j-os">
+                                <option value="-1">请选择</option>
+                            </select>
+                        </div>
+                        <div class="col-md-5">
+                            <label class="name"><span class="required">*</span>所在机柜:</label>
+                            <select class="j-cabinet">
+                                <option value="-1">请选择</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-5">
+                            <label class="name"><span class="required">*</span>系统版本:</label>
+                            <input type="text" class="j-os-version"/>
+                        </div>
+                        <div class="col-md-5">
+                            <label class="name">所在机架:</label>
+                            <select class="j-rack">
+                                <option value="-1">请选择</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-5">
+                            <label class="name"><span class="required">*</span>设备IP:</label>
+                            <input type="text" class="j-ip"/>
+                        </div>
+                        <div class="col-md-5">
+                            <label class="name">购买日期:</label>
+                            <input type="text" class="j-buy-date"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-5">
+                            <label class="name">备用IP:</label>
+                            <input type="text" class="j-ip-backup"/>
+                        </div>
+                        <div class="col-md-5">
+                            <label class="name">出保日期:</label>
+                            <input type="text" class="j-out-date"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-5">
+                            <label class="name">管理IP:</label>
+                            <input type="text" class="j-ip-mgnt"/>
+                        </div>
+                        <div class="col-md-5">
+                            <label class="name">维保状态:</label>
+                            <select class="j-main-status">
+                                <option value="-1">请选择</option>
+                                <option value="0">在保</option>
+                                <option value="1">出保</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-5">
+                            <label class="name">MAC地址:</label>
+                            <input type="text"  class="j-MAC"/>
+                        </div>
+                        <div class="col-md-5">
+                            <label class="name">维保单位:</label>
+                            <input type="text"  class="j-main-com"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-5">
+                            <label class="name"><span class="required">*</span>资源父类:</label>
+                            <select class="j-parentType">
+                                <option value="-1">请选择</option>
+                            </select>
+                        </div>
+                        <div class="col-md-5">
+                            <label class="name">维保联系人:</label>
+                            <input type="text" class="j-main-person"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-5">
+                            <label class="name"><span class="required">*</span>资源子类:</label>
+                            <select class="j-subType">
+                                <option value="-1">请选择</option>
+                            </select>
+                        </div>
+                        <div class="col-md-5">
+                            <label class="name">联系电话:</label>
+                            <input type="text"  class="j-main-tel"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-5">
+                            <label class="name"><span class="required">*</span>设备厂商:</label>
+                            <select class="j-factory">
+                                <option value="-1">请选择</option>
+                            </select>
+                        </div>
+                        <div class="col-md-5">
+                            <label class="name">电子邮件:</label>
+                            <input type="text"  class="j-main-mail"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-5">
+                            <label class="name">设备型号:</label>
+                            <input type="text" class="j-factory-type"/>
+                        </div>
+                        <div class="col-md-5">
+                            <label class="name">管理人:</label>
+                            <input type="text"  class="j-manager"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-5">
+                            <label class="name">序列号:</label>
+                            <input type="text"  class="j-serial"/>
+                        </div>
+                        <div class="col-md-5">
+                            <label class="name">使用状态:</label>
+                            <select  class="j-use-status">
+                                <option value="-1">请选择</option>
+                                <option value="0">未使用</option>
+                                <option value="1">使用中</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-5">
+                            <label class="name">厂商电话:</label>
+                            <input type="text"  class="j-factory-tel"/>
+                        </div>
+                        <div class="col-md-5">
+                            <label class="name">使用部门:</label>
+                            <input type="text" class="j-use-depart"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-5">
+                            <label class="name">厂商联系人:</label>
+                            <input type="text" class="j-factory-person"/>
+                        </div>
+                        <div class="col-md-5">
+                            <label class="name">使用人:</label>
+                            <input type="text" class="j-use-person"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-5">
+                            <label class="name">电子邮件:</label>
+                            <input type="text" class="j-factory-mail"/>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-11">
+                            <label class="name">详细配置:</label>
+                            <textarea class="text-area j-detail"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-11">
+                            <label class="name">资产备注:</label>
+                            <textarea class="text-area j-desc"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-11">
+                            <label class="name">资产照片:</label>
+                            <form enctype="multipart/form-data">
+                                <input type="file" class="file"/>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-11">
+                            <label class="name"></label>
+                            <form enctype="multipart/form-data">
+                                <input type="file" class="file"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary j-add-resource">确认</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--新增弹框-->
+<div class="modal fade" id="addMonitorModal">
+    <div class="modal-dialog  addMonitorModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">设置监控组件</h4>
+            </div>
+            <div class="modal-body">
+                <div class="check-form">
+                    <input type="hidden" class="j-assetID"/>
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-10">
+                            <div class="col-md-4">
+                                <label><input value="0" type="checkbox"/>java中间件</label>
+                            </div>
+                            <div class="col-md-4">
+                                <label><input value="1" type="checkbox"/>java中间件</label>
+                            </div>
+                            <div class="col-md-4">
+                                <label><input value="2" type="checkbox"/>oracle</label>
+                            </div>
+                            <div class="col-md-4">
+                                <label><input value="3" type="checkbox"/>tuxedo中间件</label>
+                            </div>
+                            <div class="col-md-4">
+                                <label><input value="4" type="checkbox"/>java中间件</label>
+                            </div>
+                            <div class="col-md-4">
+                                <label><input value="5" type="checkbox"/>java中间件</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary j-add-monitor">确认</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script src="/js/lib/ajaxfileupload.js"></script>
+<script src="/js/lib/bootstrapTable/bootstrap-table.min.js"></script>
+<script src="/js/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+<script src="/js/cmn_resize.js"></script>
+<script src="/js/resourceMgnt/resourceMgnt.js"></script>

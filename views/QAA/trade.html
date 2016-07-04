@@ -1,0 +1,23 @@
+{{> navigation-bar}}
+
+<link rel="stylesheet" href="/css/bootstrapTable/bootstrap-table.min.css"/>
+<link rel="stylesheet" href="/css/jquery.datetimepicker.css"/>
+
+<div class="main-box j-main">
+    <div class="toolbar clearfix">
+        <label class="name">交易时间：</label>
+        <input type="text" class="datepicker j-start" placeholder="开始时间"/>
+        到
+        <input type="text" class="datepicker j-end" placeholder="结束时间"/>
+        <div class="pull-right">
+            <button class="btn btn-primary j-search-trade">查询</button>
+        </div>
+    </div>
+    <table></table>
+</div>
+
+<script src="/js/lib/bootstrapTable/bootstrap-table.min.js"></script>
+<script src="/js/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+<script src="/js/lib/jquery.datetimepicker.js"></script>
+<script src="/js/cmn_resize.js"></script>
+<script src="/js/QAA/trade.js"></script>

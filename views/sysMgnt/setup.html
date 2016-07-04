@@ -1,0 +1,51 @@
+{{> navigation-bar}}
+
+<link rel="stylesheet" href="/css/bootstrapTable/bootstrap-table.min.css"/>
+<link rel="stylesheet" href="/css/jquery.datetimepicker.css"/>
+
+<div class="main-box j-main">
+    <div class="toolbar clearfix">
+        <div class="pull-right">
+            <button class="btn btn-primary j-search-check">查询</button>
+            <button class="btn btn-danger j-delete-check">删除</button>
+            <a class="btn btn-default" data-toggle="modal" data-target="#newSetupModal">新增</a>
+        </div>
+    </div>
+    <table></table>
+</div>
+<!--新增弹框-->
+<div class="modal fade" id="newSetupModal">
+    <div class="modal-dialog  new-setup-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">新增系统设置项</h4>
+            </div>
+            <div class="modal-body">
+                <form class="check-form">
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-5">
+                            <label class="name">设置项:</label>
+                            <input type="text" />
+                        </div>
+                        <div class="col-md-5">
+                            <label class="name">值:</label>
+                            <input type="text" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">确认</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script src="/js/lib/bootstrapTable/bootstrap-table.min.js"></script>
+<script src="/js/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+<script src="/js/lib/bootstrapTable/bootstrap-table-editable.js"></script>
+<script src="/js/lib/bootstrapTable/bootstrap-editable.js"></script>
+<script src="/js/lib/jquery.datetimepicker.js"></script>
+<script src="/js/cmn_resize.js"></script>
+<script src="/js/sysMgnt/setup.js"></script>

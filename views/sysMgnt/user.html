@@ -1,0 +1,87 @@
+{{> navigation-bar}}
+
+<link rel="stylesheet" href="/css/bootstrapTable/bootstrap-table.min.css"/>
+<link rel="stylesheet" href="/css/jquery.datetimepicker.css"/>
+
+<div class="main-box j-main">
+    <div class="toolbar clearfix">
+        <div class="pull-right">
+            <button class="btn btn-primary j-search-user">刷新</button>
+            <button class="btn btn-danger j-delete-user">删除</button>
+            <a class="btn btn-default" data-toggle="modal" data-target="#newUserModal">新增</a>
+        </div>
+    </div>
+    <table></table>
+</div>
+<!--新增弹框-->
+<div class="modal fade" id="newUserModal">
+    <div class="modal-dialog  new-user-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">新增用户</h4>
+            </div>
+            <div class="modal-body">
+                <form class="check-form">
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name"><span class="required">*</span>登录名:</label>
+                            <input type="text" class="j-loginname"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name">用户名:</label>
+                            <input type="text" class="j-name"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name"><span class="required">*</span>口令:</label>
+                            <input type="password" class="j-password"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name"><span class="required">*</span>确认口令:</label>
+                            <input type="password" class="j-rep-password"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name"><span class="required">*</span>部门:</label>
+                            <select class="j-depart">
+                                <option value="-1">请选择部门</option>
+                                <option value="1">部门</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name"><span class="required">*</span>角色:</label>
+                            <select class="j-role">
+                                <option value="-1">请选择角色</option>
+                                <option value="1">角色</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name">联系电话:</label>
+                            <input type="text" class="j-tel"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary j-add-user">确认</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script src="/js/lib/bootstrapTable/bootstrap-table.min.js"></script>
+<script src="/js/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+<script src="/js/lib/jquery.datetimepicker.js"></script>
+<script src="/js/cmn_resize.js"></script>
+<script src="/js/sysMgnt/user.js"></script>

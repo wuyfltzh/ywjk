@@ -1,0 +1,78 @@
+{{> rscNav}}
+
+<link rel="stylesheet" href="/css/bootstrapTable/bootstrap-table.min.css"/>
+<link rel="stylesheet" href="/css/resourceMgnt/common.css"/>
+<input type="hidden" class="j-host-id" value="{{hostId}}"/>
+<div class="main-box j-main">
+    <div class="content-block">
+        <table class="table table-bordered table-col-4 table-basic">
+            <caption>基本信息</caption>
+            <tr>
+                <th>监控组件</th>
+                <td class="name"></td>
+                <th>版本</th>
+                <td class="version"></td>
+            </tr>
+            <tr>
+                <th>安装目录</th>
+                <td class="dir"></td>
+                <th>JDK版本</th>
+                <td class="jdk"></td>
+            </tr>
+            <tr>
+                <th>老年代容量</th>
+                <td class="oldStorage"></td>
+                <th>老年代已使用空间</th>
+                <td class="oldUsed"></td>
+            </tr>
+            <tr>
+                <th>年轻代第一个幸存区容量</th>
+                <td class="firstStorage"></td>
+                <th>年轻代第一个幸存区已使用空间</th>
+                <td class="firstUsed"></td>
+            </tr>
+            <tr>
+                <th>年轻代第二个幸存区容量</th>
+                <td class="secStorage"></td>
+                <th>年轻代第二个幸存区已使用空间</th>
+                <td class="secUsed"></td>
+            </tr>
+            <tr>
+                <th>年轻代第二个幸存区容量</th>
+                <td class="secStorage"></td>
+                <th>年轻代第二个幸存区已使用空间</th>
+                <td class="secUsed"></td>
+            </tr>
+            <tr>
+                <th>年轻代中伊甸园的容量</th>
+                <td class="ydyStorage"></td>
+                <th>年轻代中伊甸园已使用空间</th>
+                <td class="ydyUsed"></td>
+            </tr>
+            <tr>
+                <th>应用启动到采样时老年代GC用时</th>
+                <td class="oldTime"></td>
+                <th>应用启动到采样时老年代GC次数</th>
+                <td class="oldCount"></td>
+            </tr>
+            <tr>
+                <th>应用启动到采样时年轻代GC用时</th>
+                <td class="newTime"></td>
+                <th>应用启动到采样时年轻代GC次数</th>
+                <td class="newCount"></td>
+            </tr>
+            <tr>
+                <th>应用启动到采样时GC的总用时</th>
+                <td class="totalTime"></td>
+                <th>可用性</th>
+                <td class="available"></td>
+            </tr>
+        </table>
+        <div class="caption">应用情况</div>
+        <table class="service-table"></table>
+    </div>
+</div>
+<script src="/js/lib/bootstrapTable/bootstrap-table.min.js"></script>
+<script src="/js/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+<script src="/js/cmn_resize.js"></script>
+<script src="/js/resourceMgnt/jboss.js"></script>

@@ -1,0 +1,13 @@
+.login{position:fixed;height:80%;min-height:400px;max-height:527px;width:100%;top:50%;transform:translateY(-50%);background:url("/images/bg.jpg") center center;background-size: cover;}
+.login .main{position:relative;width:980px; height:100%;margin: 0 auto;}
+.main .login-title{position:absolute;top:-61px;left:0;height:61px; width:381px;background:url("/images/login-title.png") no-repeat;}
+.main .footer{position:absolute;width:100%;bottom:-30px;line-height:30px; text-align:center;}
+.main .login-form{ float:right; position:relative;width:386px;height:100%;margin-right:50px;background:#fff;border: 1px solid #6898ce;border-width:1px 0;}
+.login-form .main-form{ position:absolute;width:100%;height:400px;top:50%;margin-top:-200px;}
+.main-form .icon{margin: 30px auto; width:100px; height:99px;background: url("../images/login-icon.png") no-repeat;}
+.main-form .row{margin:0;width:100%;padding-left:25px;}
+.main-form .label{display:inline-block;color:#333;width:60px;font-size:16px;text-align:center;}
+.main-form .input-user,.main-form .input-user:focus{ margin-bottom:5px;border:1px solid #ccc;border-radius:3px;padding-left:35px;width:260px;height:37px;line-height:37px;background:url('../images/user.png') no-repeat;font-size:15px;}
+.main-form .input-pwd,.main-form .input-pwd:focus{ margin-bottom:5px;border:1px solid #ccc;border-radius:3px;padding-left:35px;width:260px;height:37px;line-height:37px;background:url('../images/password.png') no-repeat;font-size:15px;}
+.main-form .login-button{display:block;margin:50px 50px 10px;}
+.main-form .msg{text-align:center;color:#f00;}

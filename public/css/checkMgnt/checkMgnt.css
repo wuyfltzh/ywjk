@@ -1,0 +1,5 @@
+.new-check-modal{width:1200px;}
+.modal-table{height:120px;overflow:auto;}
+.modal-table table{width:100%;}
+.modal-table td,.modal-table th{border:1px solid #ddd;text-align:center;border-collapse:collapse;}
+input[type="file"]{display:inline-block;}

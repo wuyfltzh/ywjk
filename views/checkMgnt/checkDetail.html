@@ -1,0 +1,81 @@
+{{> navigation-bar}}
+
+<link rel="stylesheet" href="/css/bootstrapTable/bootstrap-table.min.css"/>
+<link rel="stylesheet" href="/css/resourceMgnt/common.css"/>
+<link rel="stylesheet" href="/css/resourceMgnt/rscDetail.css"/>
+<style>
+    .text-center th,.text-center th{text-align:center;vertical-align:middle !important;}
+</style>
+<div class="main-box j-main">
+    <div class="content-block">
+        <table class="table table-bordered table-col-4">
+            <caption>巡检综述</caption>
+            <tr>
+                <th>巡检名称</th>
+                <td>{{resourceInfo.data.assetID}}</td>
+                <th>巡检日期</th>
+                <td>{{resourceInfo.data.expireDate}}</td>
+            </tr>
+            <tr>
+                <th>巡检人员</th>
+                <td>{{resourceInfo.data.assetName}}</td>
+                <th>联系方式</th>
+                <td>{{resourceInfo.data.roomID}}</td>
+            </tr>
+            <tr>
+                <th>确认用户</th>
+                <td>{{resourceInfo.data.factoryOS}}</td>
+                <th>用户电话</th>
+                <td>{{resourceInfo.data.cabinetID}}</td>
+            </tr>
+            <tr>
+                <th>更换配件</th>
+                <td>{{resourceInfo.data.osVersion}}</td>
+                <th>巡检报告</th>
+                <td><a href="#">下载</a></td>
+            </tr>
+            <tr>
+                <th>问题综述</th>
+                <td colspan="3">{{resourceInfo.data.iPAddr}}</td>
+            </tr>
+            <tr>
+                <th>本次解决</th>
+                <td colspan="3">{{resourceInfo.data.iPAddr2}}</td>
+            </tr>
+            <tr>
+                <th>后续建议</th>
+                <td colspan="3">{{resourceInfo.data.iPManage}}</td>
+            </tr>
+        </table>
+        <table class="table table-bordered text-center">
+            <caption>巡检明细</caption>
+            <tr>
+                <th rowspan="2">序号</th>
+                <th rowspan="2">巡检项目</th>
+                <th rowspan="2">巡检结果</th>
+                <th rowspan="2">检出问题</th>
+                <th rowspan="2">解决说明</th>
+                <th colspan="2">照片</th>
+            </tr>
+            <tr>
+                <th>解决前</th>
+                <th>解决后</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="/js/lib/bootstrapTable/bootstrap-table.min.js"></script>
+<script src="/js/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+<script src="/js/cmn_resize.js"></script>
+<script src="/js/resourceMgnt/rscDetail.js"></script>

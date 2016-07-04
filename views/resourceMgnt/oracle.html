@@ -1,0 +1,60 @@
+{{> rscNav}}
+
+<link rel="stylesheet" href="/css/bootstrapTable/bootstrap-table.min.css"/>
+<link rel="stylesheet" href="/css/resourceMgnt/common.css"/>
+<link rel="stylesheet" href="/css/resourceMgnt/oracle.css"/>
+<input type="hidden" class="j-host-id" value="{{hostId}}"/>
+<div class="main-box j-main">
+    <div class="content-block">
+        <table class="table table-bordered table-col-4">
+            <caption>基本信息</caption>
+            <tr>
+                <th>监控组件</th>
+                <td class="basic-name">Oracle</td>
+                <th>数据库启动时间</th>
+                <td class="basic-start"></td>
+            </tr>
+            <tr>
+                <th>数据库版本</th>
+                <td class="basic-version"></td>
+                <th>数据库运行时间</th>
+                <td class="basic-run"></td>
+            </tr>
+            <tr>
+                <th>连接用户数</th>
+                <td class="basic-connections"></td>
+                <th>重做日志大小</th>
+                <td class="basic-logsize"></td>
+            </tr>
+            <tr>
+                <th>操作系统</th>
+                <td class="basic-os"></td>
+                <th>最大进程数</th>
+                <td class="basic-max-prgrs"></td>
+            </tr>
+            <tr>
+                <th>当前进程数</th>
+                <td class="basic-current-prgrs"></td>
+                <th>可用性</th>
+                <td class="basic-usable"></td>
+            </tr>
+        </table>
+        <div class="caption">性能信息</div>
+        <ul class="perform-list">
+            <div class="row">
+                <li class="col-sm-6 j-cpu-his">
+                </li>
+                <li class="col-sm-6 j-current-com">
+                </li>
+            </div>
+        </ul>
+        <div class="caption">文件系统</div>
+        <table class="table-file">
+        </table>
+    </div>
+</div>
+<script src="/js/lib/bootstrapTable/bootstrap-table.min.js"></script>
+<script src="/js/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+<script src="/js/lib/highcharts.js"></script>
+<script src="/js/cmn_resize.js"></script>
+<script src="/js/resourceMgnt/oracle.js"></script>

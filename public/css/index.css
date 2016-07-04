@@ -1,0 +1,28 @@
+.roll-info{width:100%;height:35px;border:1px solid #c6c4c5;border-width:1px 0;padding-left:85px;background:#d9e5f3;line-height:33px;}
+.roll-info .info-container{display:inline-block;height:100%;width:800px;overflow-y:hidden;}
+.roll-info .info-container ul{margin:-99px 0 0 30px;}
+.roll-info .info-container ul li{list-style:none;}
+.roll-info .info-icon{float:left;height:100%;width:30px;background:url("../images/speaker.png") no-repeat 8px;}
+
+.main{margin:0 10px 0 0;ppxoverflow-y:auto;overflow-x:hidden;}
+
+.content-block{float:left;margin:1% 0 0 1%;width:49%;border:1px solid #dadada;border-radius:5px;background:#fff;}
+.content-block:last-child{margin-bottom:10px;}
+.content-block .title{height:32px;border-bottom:1px solid #dadada;border-radius:5px 5px 0 0;padding:0 15px;background:#f7f7f7;line-height:31px;}
+.content-block .chart-container{height:300px;}
+.content-block .chart-container .half-chart{float:left;width:50%;height:100%;}
+
+.title .main-icon{position:relative;top:6px;display:inline-block;margin-right:10px;height:19px;width:23px;background:url("../images/main-icons.png") no-repeat;cursor:pointer;}
+.title .warn{background-position:-1px 0px}
+.title .trade{background-position:-72px 0px}
+.title .machine{background-position:-24px 0px}
+.title .database{background-position:-47px 0px}
+/*.title .warn{background-position:0px 0px}
+.title .warn{background-position:0px 0px}
+.title .warn{background-position:0px 0px}
+.title .warn{background-position:0px 0px}*/
+.title .set{background-position:-95px 0px}
+.title .refresh{background-position:-116px 0px;margin:0}
+
+.content-block .title .tool{float:right;}
+.content-block .title .main-title{color:#3a7bbb}

@@ -1,0 +1,129 @@
+{{> navigation-bar}}
+
+<link rel="stylesheet" href="/css/bootstrapTable/bootstrap-table.min.css"/>
+<link rel="stylesheet" href="/css/jquery.datetimepicker.css"/>
+
+<div class="main-box j-main">
+    <div class="toolbar toolbar-company clearfix">
+        <label>维保单位</label>
+        <div class="pull-right">
+            <button class="btn btn-primary j-search-check">查询</button>
+            <button class="btn btn-danger j-delete-check">删除</button>
+            <a class="btn btn-default" data-toggle="modal" data-target="#newCompanyModal">新增</a>
+        </div>
+    </div>
+    <table class="table-company"></table>
+    <div class="toolbar toolbar-factory clearfix">
+        <label>维保厂商</label>
+        <div class="pull-right">
+            <button class="btn btn-primary j-search-check">查询</button>
+            <button class="btn btn-danger j-delete-check">删除</button>
+            <a class="btn btn-default" data-toggle="modal" data-target="#newFactoryModal">新增</a>
+        </div>
+    </div>
+    <table class="table-factory"></table>
+</div>
+<!--新增弹框-->
+<div class="modal fade" id="newCompanyModal">
+    <div class="modal-dialog  new-company-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">新增维保单位</h4>
+            </div>
+            <div class="modal-body">
+                <form class="check-form">
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name">单位名称:</label>
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name">联系人:</label>
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name">联系电话:</label>
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name">电子邮件:</label>
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name">备注:</label>
+                            <input type="text" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">确认</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!--新增弹框-->
+<div class="modal fade" id="newFactoryModal">
+    <div class="modal-dialog  new-factory-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">新增维保厂商</h4>
+            </div>
+            <div class="modal-body">
+                <form class="check-form">
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name">厂商名称:</label>
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name">联系人:</label>
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name">联系电话:</label>
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name">电子邮箱:</label>
+                            <input type="text" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6">
+                            <label class="name">备注:</label>
+                            <input type="text" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">确认</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script src="/js/lib/bootstrapTable/bootstrap-table.min.js"></script>
+<script src="/js/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+<script src="/js/lib/jquery.datetimepicker.js"></script>
+<script src="/js/cmn_resize.js"></script>
+<script src="/js/sysMgnt/maintenance.js"></script>

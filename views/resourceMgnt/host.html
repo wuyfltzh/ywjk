@@ -1,0 +1,69 @@
+{{> rscNav}}
+
+<link rel="stylesheet" href="/css/bootstrapTable/bootstrap-table.min.css"/>
+<link rel="stylesheet" href="/css/resourceMgnt/common.css"/>
+<link rel="stylesheet" href="/css/resourceMgnt/host.css"/>
+<input type="hidden" class="j-host-id" value="{{hostId}}"/>
+<div class="main-box j-main">
+    <div class="content-block">
+        <table class="table table-bordered table-col-4">
+            <caption>基本信息</caption>
+            <tr>
+                <th>主机名称</th>
+                <td class="basic-name"></td>
+                <th>操作系统</th>
+                <td class="basic-os"></td>
+            </tr>
+            <tr>
+                <th>主机IP</th>
+                <td class="basic-ip"></td>
+                <th>系统版本</th>
+                <td class="basic-version"></td>
+            </tr>
+            <tr>
+                <th>品牌型号</th>
+                <td class="basic-band"></td>
+                <th>启动时间</th>
+                <td class="basic-starttime"></td>
+            </tr>
+            <tr>
+                <th>资源类型</th>
+                <td class="basic-srctype"></td>
+                <th>运行时间</th>
+                <td class="basic-runtime"></td>
+            </tr>
+            <tr>
+                <th>检测间隔</th>
+                <td>30秒</td>
+                <th>当前状态</th>
+                <td class="basic-status"></td>
+            </tr>
+        </table>
+        <div class="caption">性能信息</div>
+        <ul class="perform-list">
+            <div class="row">
+                <li class="col-sm-4 j-chart-cpu">
+                </li>
+                <li class="col-sm-4 j-chart-pim">
+                </li>
+                <li class="col-sm-4 j-chart-vim">
+                </li>
+            </div>
+            <div class="row">
+                <li class="col-sm-6 j-cpu-his">
+                </li>
+                <li class="col-sm-6 j-im-his">
+                </li>
+            </div>
+        </ul>
+        <div class="caption">文件系统</div>
+        <table class="table-file">
+        </table>
+    </div>
+</div>
+<script src="/js/lib/bootstrapTable/bootstrap-table.min.js"></script>
+<script src="/js/lib/bootstrapTable/bootstrap-table-zh-CN.min.js"></script>
+<script src="/js/lib/highcharts.js"></script>
+<script src="/js/lib/highcharts-more.js"></script>
+<script src="/js/cmn_resize.js"></script>
+<script src="/js/resourceMgnt/host.js"></script>
